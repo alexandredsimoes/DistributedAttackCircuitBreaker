@@ -9,14 +9,14 @@ public enum CircuitState
 
 public sealed record CircuitOptions
 {
-    public string Name { get; init; } = "attack-protection";
-    public int AttackThreshold { get; init; } = 10;
-    public TimeSpan Window { get; init; } = TimeSpan.FromSeconds(60);
-    public TimeSpan OpenDuration { get; init; } = TimeSpan.FromSeconds(30);
-    public int HalfOpenSuccessThreshold { get; init; } = 3;
-    public TimeSpan LockDuration { get; init; } = TimeSpan.FromSeconds(10);
-    public TimeSpan CheckInterval { get; init; } = TimeSpan.FromSeconds(2);
-    public TimeSpan EventRetention { get; init; } = TimeSpan.FromMinutes(5);
+    public string Name { get; set; } = "attack-protection";
+    public int AttackThreshold { get; set; } = 10;
+    public TimeSpan Window { get; set; } = TimeSpan.FromSeconds(60);
+    public TimeSpan OpenDuration { get; set; } = TimeSpan.FromSeconds(30);
+    public int HalfOpenSuccessThreshold { get; set; } = 3;
+    public TimeSpan LockDuration { get; set; } = TimeSpan.FromSeconds(10);
+    public TimeSpan CheckInterval { get; set; } = TimeSpan.FromSeconds(2);
+    public TimeSpan EventRetention { get; set; } = TimeSpan.FromMinutes(5);
 }
 
 public sealed record AttackResult(

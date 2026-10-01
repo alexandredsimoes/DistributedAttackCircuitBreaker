@@ -1,0 +1,6 @@
+@DistributedAttackCircuitBreaker.WebApi_HostAddress = http://localhost:5125
+
+GET {{DistributedAttackCircuitBreaker.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
